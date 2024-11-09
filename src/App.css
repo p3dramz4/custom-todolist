@@ -1,38 +1,222 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
+body {
+  background-color: mediumslateblue;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+
+header {
+  font-size: 1.5rem;
+}
+
+header {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  flex-wrap: wrap;
+}
+
+form {
+  max-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  flex-wrap: wrap;
+  margin-bottom: 26px;
+}
+
+form input,
+form button {
+  padding: 0.5rem;
+  padding-left: 1rem;
+  font-size: 1.8rem;
+  border: none;
+  background: white;
+  border-radius: 2rem;
+}
+
+form button {
+  color: rgb(255, 200, 0);
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 0.5rem;
+}
+
+form button:hover {
+  color: white;
+  background: rgb(255, 200, 0);
+}
+
+.title {
+  text-align: center;
+  padding: 0 10px;
+}
+
+.fa-plus-circle {
+  margin-top: 0.3rem;
+  margin-left: -8px;
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+.todo {
+  margin: 0.5rem;
+  padding-left: 0.5rem;
+  background: white;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+  border-radius: 2rem;
+}
+
+.todo li {
+  flex: 1;
+}
+
+.trash-btn,
+.complete-btn {
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.complete-btn {
+  background: rgb(255, 200, 0);
+}
+
+.trash-btn {
+  border-top-right-radius: 1.75rem;
+  border-bottom-right-radius: 1.75rem;
+  background: rgb(171, 171, 171);
+} 
+
+.todo-input {
+  outline: none;
+}
+
+.todo-item {
+  padding: 0.5rem;
+  flex-wrap: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
+  width: 350px; 
+  height: 2.5rem; 
+}
+
+.todo-item.expanded {
+  white-space: normal;
+  overflow: visible; 
+  height: auto; 
+}
+
+
+.more-text {
+  cursor: pointer;
+  color: rgb(255, 200, 0);
+  font-size: 1.3rem;
+}
+
+.fa-trash,
+.fa-check-circle {
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.slide {
+  transform: translateX(10rem);
+  opacity: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50px;
+}
+
+select {
+  color: rgb(255, 200, 0);
+  width: 10rem;
+  height: 3.2rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background: rgb(255, 200, 0);
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.select:hover::after {
+  background: white;
+  color: rgb(255, 200, 0);
+}
+
+/* Custom Swal */
+
+.swal-footer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
+ @media screen and (max-width: 480px) {
 
-.App-link {
-  color: #61dafb;
-}
+  .todo-item {
+    width: 200px;
+    font-size: 1rem;
+  }
+  .todo-input {
+    width: 300px;
+  }
+ }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+ @media screen and (max-width: 680px) {
+
+  .filter-todo {
+    min-width: 100px;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
+ }

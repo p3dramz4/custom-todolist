@@ -1,0 +1,34 @@
+{
+  "todos": [
+    {
+      "id": "cbac",
+      "title": "Microprocessor midterm",
+      "isDone": true
+    },
+    {
+      "id": "2a07",
+      "title": "Operating system midterm",
+      "isDone": false
+    },
+    {
+      "id": "f754",
+      "title": "Software engineering midterm",
+      "isDone": false
+    },
+    {
+      "id": "5ed2",
+      "title": "Ui/Ux midterm",
+      "isDone": false
+    },
+    {
+      "id": "e9b1",
+      "title": "Next.js project",
+      "isDone": true
+    },
+    {
+      "id": "8225",
+      "title": "Customize todolist",
+      "isDone": true
+    }
+  ]
+}
